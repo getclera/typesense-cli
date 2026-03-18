@@ -1,0 +1,55 @@
+{
+  "name": "@clera/typesense-cli",
+  "version": "1.0.0",
+  "description": "A modern CLI for managing Typesense search clusters",
+  "type": "module",
+  "bin": {
+    "typesense-cli": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts --clean",
+    "dev": "tsx src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "typesense",
+    "cli",
+    "search",
+    "full-text-search",
+    "vector-search"
+  ],
+  "author": "Clera",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/getclera/typesense-cli.git"
+  },
+  "homepage": "https://github.com/getclera/typesense-cli#readme",
+  "bugs": {
+    "url": "https://github.com/getclera/typesense-cli/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^12.1.0",
+    "dotenv": "^16.4.5",
+    "typesense": "^1.8.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "tsup": "^8.1.0",
+    "tsx": "^4.15.0",
+    "typescript": "^5.4.5"
+  }
+}
